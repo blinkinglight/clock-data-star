@@ -1,0 +1,18 @@
+package views
+
+import "github.com/delaneyj/datastar"
+
+templ ClockPage() {
+	@Page() {
+		<div data-on-load={ datastar.GET("/clock") }>
+			<h1>Clock</h1>
+            <div id="clock"></div>
+		</div>
+	}
+}
+
+templ ClockFragment(t string) {
+	<div id="clock">
+		{ t }
+	</div>
+}
